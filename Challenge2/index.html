@@ -1,0 +1,100 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+   />
+   <link rel="stylesheet" href="style.css">
+</head>
+<body class="background">
+    <!-- header -->
+    <header class="header">
+        <button class="prev-btn">
+            <a href="../Challenge1/index.html">
+                <i class="fas fa-chevron-left fa-2x arrow"></i>
+            </a>
+        </button>
+        <img class="icon-size" src="./assets/pictures/logo.png" alt="logo">
+        <h1 class="title">Rock Paper Scissors</h1>       
+    </header>
+    
+    
+    <main>
+        
+        <!-- content -->
+        <div class="flex">
+            
+            <!-- player -->
+            
+            <div class="Options">
+                <div class="player">
+                    <h2>Player 1</h2>
+                </div>
+                <div class="rockpaperscissors">
+                    <div class="choice player1 rock">
+                        <button class="btn rock animated">
+                            <img class="img-size" src="./assets/pictures/rock.png" alt="rock">
+                        </button>
+                    </div>
+                    <div class="choice player1 paper">
+                        <button class="btn paper animated">
+                            <img class="img-size" src="./assets/pictures/paper.png" alt="paper">
+                        </button>
+                    </div>
+                    <div class="choice player1 scissors">
+                        <button class="btn scissors animated">
+                            <img class="img-size" src="./assets/pictures/scissors.png" alt="scissors">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="sign resize">
+                <!-- VS -->
+
+                <div class="status">
+                    <span class="vs" id="result">VS</span>
+                </div>
+            
+                <!-- refresh -->
+                <div class="refresh">
+                    <button class="ref">
+                        <img class="ref-size" src="./assets/pictures/refresh.png" alt="refresh">
+                    </button>
+                </div>
+            </div>
+
+            <!-- com -->
+            <div class="Options">
+                <div class="com">
+                    <h2>Computer</h2>
+                </div>  
+                <div class="rockpaperscissors">
+                    <div class="choice com rock">
+                        <button class="btn rock">
+                            <img class="img-size" src="./assets/pictures/rock.png" alt="rock">
+                        </button>
+                    </div>
+                    <div class="choice com paper">
+                        <button class="btn paper">
+                            <img class="img-size" src="./assets/pictures/paper.png" alt="paper">
+                        </button>
+                    </div>
+                    <div class="choice com scissors">
+                        <button class="btn scissors">
+                            <img class="img-size" src="./assets/pictures/scissors.png" alt="scissors">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- javascript -->
+    <script src="scipt.js"></script>
+</body>
+</html>
