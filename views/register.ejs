@@ -1,0 +1,22 @@
+<html lang="en">
+
+<head>
+    <%- include('./partials/header.ejs') %>
+</head>
+
+<body>
+  
+    
+  <div class="create-blog content">
+    <form action="/api/register" method="POST">
+      <label for="title">Nama lengkap:</label>
+      <input type="text" id="nama_lengkap" name="nama_lengkap" required>
+        <label for="title">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="snippet">Password:</label>
+        <input type="password" id="snippet" name="password" required>
+        <button>Submit</button>
+    </form>
+  </div>
+</body>
+</html>
