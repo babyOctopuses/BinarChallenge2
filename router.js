@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const fs= require('fs');
-
+const {user_game} = require('./models');
 let posts = require('./posts.json');
 let use=[];
 
@@ -11,8 +11,32 @@ router.use(express.static('public'));
 //     res.render('register');
 // })
 
+
+
 router.get('/', (req, res)=>{
     res.render('index')
+})
+
+router.get('/home', (req, res)=>{
+    res.render('index')
+})
+
+router.get('/signup', (req, res)=>{
+    res.render('signup')
+})
+
+// POST an article
+router.post('/signup', (req,res)=>{
+    user_game.create({
+        username:req.body.username,
+        password:req.body.password,
+    })
+    .then(user_game=>{
+        res.status(201).json(user_game);
+        // res.redirect('/home')
+    }).catch(err=>{
+        res.status.apply(422).json(`Can't create user`)
+    })
 })
 
 router.get('/game', (req, res)=>{
