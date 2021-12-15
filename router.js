@@ -1,17 +1,12 @@
 const express = require('express')
 const router = express.Router()
-const fs= require('fs');
 const {user_game} = require('./models');
-let posts = require('./posts.json');
-let use=[];
 
 router.use(express.static('public'));
 
 
 //GET Methods
-router.get('/', (req, res)=>{
-    res.render('login')
-})
+router.get('/', authController.gethome)
 
 
 router.get('/home', (req, res)=>{
